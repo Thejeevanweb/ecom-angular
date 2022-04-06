@@ -1,0 +1,20 @@
+<section class="product_list section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-4" *ngFor="let product of products;">
+                        <div class="single_product_item">
+                            <img src="{{ baseurl + product.imagepath }}" alt="">
+                            <div class="single_product_text">
+                                <h4>{{ product.name }}</h4>
+                                <h3>{{ product.price | currency:"INR" }}</h3>
+                                <button (click)="addtocart(product._id)" class="btn btn-primary">+ add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
